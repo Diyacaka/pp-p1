@@ -2,6 +2,7 @@
 const {
   Model
 } = require('sequelize');
+const userprofile = require('./userprofile');
 module.exports = (sequelize, DataTypes) => {
   class Transaction extends Model {
     /**
@@ -11,6 +12,8 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      Transaction.belongsTo(models.UserProfile)
+      Transaction.belongsToMany(models.Event, { through: models.Trans_Event });
     }
   }
   Transaction.init({

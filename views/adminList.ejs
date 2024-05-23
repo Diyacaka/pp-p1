@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="/admin/addEvent">Add Event</a> |
+    <a href=""></a> |
+    <a href=""></a> |
+    <hr>
+    <br>
+
+
+    <table border="1">
+        <tr>
+            <th>name</th>
+            <th>category</th>
+            <th>location</th>
+            <th>price</th>
+            <th>date</th>
+            <th>edited</th>
+            <th>Action</th>
+        </tr>
+        <% event.forEach(l => { %>
+            <tr>
+                <td><%= l.name %></td>
+                <td><%= l.category %></td>
+                <td><%= l.location %></td>
+                <td><%= l.price %></td>
+                <td><%= l.date %></td>
+                <td><%= l.date %></td>
+                <td><a href="/admin/edit/<%= l.id %>">Edit</a>||<a href="/admin/delete/<%= l.id %>">Delete</a></td>
+        <% }) %>
+
+    </table>
+
+
+
+</body>
+</html>

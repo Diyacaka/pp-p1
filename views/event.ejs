@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <table border="1">
+            <tr>
+                <th>Date</th>
+                <th>Name</th>
+                <th>Location</th>
+                <th>Category</th>
+                <th>Price</th>
+                <th>Action</th>
+            </tr>
+            <% data.forEach(event => { %>
+            <tr>
+                <td><%= event.date %></td>
+                <td><%= event.name %></td>
+                <td><%= event.location %></td>
+                <td><%= event.category %></td>
+                <td><%= event.price %></td>
+                <td><a href=""><Button>BUY TICKET</Button></a></td>
+            </tr>
+            <% }) %>
+        </table>
+    </center>
+
+</body>
+</html>
